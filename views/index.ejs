@@ -1,0 +1,19 @@
+<%- include('partials/header', { loggedIn }) %>
+<div class="jumbotron jumbotron-fluid mt-5">
+    <div class="container">
+        <h1 class="display-4">Welcome, <%= locals.nama || 'Guest' %></h1>
+        <p class="lead">
+           Haloo.. Regis kalo belom, login kalo udah regis yaa
+        </p>
+    </div>
+</div>
+<%- include('partials/footer') %>
+
+<!-- <% %>
+Coding js didalam ejs, nambah logika, looping, dkk.
+
+<%= %>
+Ketika ingin menampilkan si variable ke ejs
+
+<%- %>
+tambahkan bagian dari code  -->

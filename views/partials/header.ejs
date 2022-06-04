@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Express App</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Express App</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <% if (!loggedIn) { %>
+                        <li class="nav-item active" aria-current="page">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <% } else { %>
+                        <li class="nav-item active" aria-current="page">
+                                 <a href="/profile" class="nav-link">Profile</a> 
+                        </li>
+                        <li class="nav-item active" aria-current="page">
+                            <form method="post" action="/logout">
+                                <a
+                                    class="nav-link"
+                                    onclick="this.parentNode.submit()"
+                                    >Logout</a
+                                >
+                            </form>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.google.com/search?q=sorry.png&tbm=isch&source=iu&ictx=1&vet=1&fir=dq_PLuqmzJievM%252C1KYAUkETn0MLpM%252C_%253BUXrodedRAF5fAM%252CDQ1tQrCX5qs3cM%252C_%253BQqNjBkOccLUTjM%252CJ_fsU8ce_PvxQM%252C_%253BJCBLMF5OJJwUwM%252CX7ndtu8YHp9yiM%252C_%253BSkdP-Df2V7Bk-M%252C4kDxwNygFxPZMM%252C_%253BMFj4Zq9HtSfTXM%252CDQ1tQrCX5qs3cM%252C_%253B9scCoxox2kw1GM%252CNShUnp-1pDxbPM%252C_%253Bb9ThxGs4gOFkyM%252CuXfl1oh2Yfu0LM%252C_%253BIo4wZ5yqOyu0aM%252CjGPzAO8HA5mS_M%252C_%253BzxrTy4FY8altIM%252Cw9-IaaHuLzrEYM%252C_%253BBZw16R898ZLf2M%252CZqB9v4YZZ_j7_M%252C_%253B3diRd5lni7ZffM%252CluzP9Tm3MxFSvM%252C_%253Bbj_wCBJKuNI1rM%252CfbCebvJE8eLheM%252C_%253BgRE0ampXisBU7M%252C0DX0eh-Jg-i5LM%252C_&usg=AI4_-kRNMaMrD1g-mwKPl3cSLqbwXNN6vQ&sa=X&ved=2ahUKEwiK99Pzg5T4AhXCmeYKHQ9DCDwQ9QF6BAgVEAE#imgrc=QqNjBkOccLUTjM">Maaf kak, i tried my best :(( </a>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </body>
+</html>
